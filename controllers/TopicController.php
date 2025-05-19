@@ -211,8 +211,6 @@ class TopicController
         else {
             echo json_encode(['error' => 'Failed to edit topic']);
         }
-
-
     }
 
     private function render($view, $data = []): bool|string

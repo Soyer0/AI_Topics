@@ -113,6 +113,10 @@ $(document).ready(function () {
         const groupId = parseInt($('#groupIdInput').val().trim(), 10);
         const processedAt = parseInt($('#processedAtInput').val().trim(), 10);
 
+        if(!topicId){
+            showModal('customErrorModal', 'Failed to retrieve topic ID.')
+        }
+
         if (!topic || isNaN(groupId) || isNaN(processedAt)) {
             showModal('customErrorModal', 'Please fill in all fields correctly.');
             return;
