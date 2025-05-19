@@ -101,14 +101,14 @@ $(document).ready(function () {
             $('#groupIdInput').val(topic.group_id);
             $('#processedAtInput').val(topic.processed_at)
 
-            $('#topicModal').attr('data-topic-id', topicId);
+            $('#topicModal').attr('data-topic_id', topicId);
 
             showModal('topicModal');
         });
     });
 
     $(document).on('click', '#editTopicBtn', function () {
-        const topicId = $('#topicModal').attr('data-topic-id');
+        const topicId = $('#topicModal').attr('data-topic_id');
         const topic = $('#topicInput').val().trim();
         const groupId = parseInt($('#groupIdInput').val().trim(), 10);
         const processedAt = parseInt($('#processedAtInput').val().trim(), 10);

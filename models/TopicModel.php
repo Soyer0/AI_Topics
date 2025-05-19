@@ -41,7 +41,8 @@ class TopicModel extends Model {
             'created_at' => $created_at,
             'created_by' => 0,
             'processed_at' => 0,
-            'group_name' => $groupName->name];
+            'group_name' => $groupName->name
+        ];
     }
 
     public function updateActiveStatus(int $id, int $status)
